@@ -1,0 +1,141 @@
+body{
+  color: #554994;
+  font-family: Roboto;
+  font-weight: 900;
+}
+
+#main_content{
+  background: url(../image/background-inside.jpg), #FFF;
+  height: 100vh;
+  z-index: 0;
+}
+
+.leftbar{
+  height: 100vh;
+}
+
+.btn-blue{
+  color: #554994 ;
+  border: #554994 1px solid;
+  background-color: transparent;
+  border-radius: 30px;
+  margin-bottom: 2px;
+  margin-right: 10px;
+  font-weight: bolder;
+}
+
+.btn-blue:hover, :focus{
+  background-color: #554994;
+  border-radius: 99px;
+  color: #fff ;
+}
+
+.input_bar{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 99px;
+  background-color: #FFF;
+}
+
+.input_bar > .form-control, .btn{
+  border: #fff;
+  border-radius: inherit;
+}
+
+.input_bar > .form-control:focus, .btn{
+  outline: none !important;
+  box-shadow: none;
+  border: #FFF;
+}
+
+.question_pop{
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #554994;
+}
+
+.question_pop p{
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0;
+}
+
+.question_pop .question,.answeer{
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.question_pop .question{
+  background-color: #FFF;
+}
+
+.question_pop .answeer{
+  background-color: #554994;
+  color: #fff;
+  margin-top: 12px;
+  margin-left: 20%;
+}
+
+.answeer .btn{
+  border-radius: 99px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.answeer div{
+  left: 85%
+}
+
+.vertical-scroll{
+  overflow: hidden;
+}
+
+.vertical-scroll:hover{
+  overflow-y: auto;
+}
+
+/* width */
+.vertical-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.vertical-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.vertical-scroll::-webkit-scrollbar-thumb {
+  background: #554994; 
+}
+
+/* Handle on hover */
+.vertical-scroll::-webkit-scrollbar-thumb:hover {
+  background: #554994; 
+}
+
+.tab_list{
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 99px;
+  padding:5px
+}
+
+.tab_list > p{
+  height: 35px;
+  width: 35px;
+  color:#fff;
+  margin:0;
+  border-radius:50%;
+  background:#554994;
+  text-align:center;
+  line-height: 35px;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px){
+  .leftbar{
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    z-index:1;
+  }
+}
