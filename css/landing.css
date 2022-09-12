@@ -24,7 +24,7 @@ body{
   font-weight: bolder;
 }
 
-.btn-blue:hover, :focus{
+.btn-blue:hover, .btn-blue:focus{
   background-color: #554994;
   border-radius: 99px;
   color: #fff ;
