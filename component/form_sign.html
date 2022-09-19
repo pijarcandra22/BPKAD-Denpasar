@@ -3,8 +3,8 @@
     <div class="modal-content">
       <div class="modal-body position-relative pb-0">
         <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-        <h5 class="modal-title" id="staticBackdropLabel">Sign In</h5>
-        <div class="p-3" style="background: linear-gradient(0deg, rgba(76, 135, 156, 0.95), rgba(76, 135, 156, 0.95)), url(https://i.pinimg.com/564x/41/75/89/417589977935a69806102c96c8da09dc.jpg); 
+        <h5 class="modal-title tittle-bar" id="staticBackdropLabel">Sign In</h5>
+        <div class="p-3" style="background: linear-gradient(0deg, rgba(193, 64, 64, 0.95), rgba(193, 64, 64, 0.95)), url(https://i.pinimg.com/564x/41/75/89/417589977935a69806102c96c8da09dc.jpg); 
         text-align:center; background-size:cover; border-radius:7px;">
           <form id="in_form" role="form">
             <input class="form-control" type="text" placeholder="NIP/ID">
@@ -25,7 +25,7 @@
       <div class="modal-body position-relative pb-0">
         <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
         <h5 class="modal-title tittle-bar" id="staticBackdropLabel">Sign Up</h5>
-        <div class="p-3" style="background: linear-gradient(0deg, rgba(76, 135, 156, 0.95), rgba(76, 135, 156, 0.95)), url(https://i.pinimg.com/564x/41/75/89/417589977935a69806102c96c8da09dc.jpg); 
+        <div class="p-3" style="background: linear-gradient(0deg, rgba(193, 64, 64, 0.95), rgba(193, 64, 64, 0.95)), url(https://i.pinimg.com/564x/41/75/89/417589977935a69806102c96c8da09dc.jpg); 
         text-align:center; background-size:cover; border-radius:7px;">
           <form id="up_form" role="form">
             <input class="form-control mt-2" type="text" placeholder="Nama Lengkap">
@@ -44,3 +44,36 @@
     </div>
   </div>
 </div>
+<div class="modal fade" id="formSign3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body position-relative pb-0" style="padding-top: 100px;">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <label for="img_user" class="position-absolute top-0 start-50 translate-middle position-relative" id="img_user_label">
+          <div class="position-absolute bottom-0 start-50 translate-middle-x">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+        </label>
+        <h5 class="modal-title tittle-bar" id="staticBackdropLabel">Profil Pengguna</h5>
+        <div class="p-3" style="background: linear-gradient(0deg, rgba(193, 64, 64, 0.95), rgba(193, 64, 64, 0.95)), url(https://i.pinimg.com/564x/41/75/89/417589977935a69806102c96c8da09dc.jpg); 
+        text-align:center; background-size:cover; border-radius:7px;">
+          <form id="up_form" role="form">
+            <input type="file" id="img_user" style="display: none;">
+            <input class="form-control mt-2" type="text" placeholder="Nama Lengkap">
+            <input class="form-control mt-2" type="text" placeholder="Instansi">
+            <input class="form-control mt-2" type="text" placeholder="Email">
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer button-content" style="border: none; text-align:center">
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Pertanyaan Saya</button>
+        <button type="button" class="btn btn-primary" id="up-submit">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $("#img_user").change(function() {
+    $("#img_user_label").css({"background-image":"url("+URL.createObjectURL(document.getElementById('img_user').files[0])+")"})
+  })
+</script>

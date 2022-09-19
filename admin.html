@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BPKAD Menjawab</title>
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  
+  <!--Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/5eff079939.js" crossorigin="anonymous"></script>
+
+  <!--Local CSS-->
+  <link href="css/landing.css" rel="stylesheet">
+
+  <style>
+    #belum_jawab{
+      height: 100%;
+    }
+
+    #question_all{
+      height:500px
+    }
+
+    @media (min-width: 768px){
+      #belum_jawab{
+        height: 70vh;
+      }
+
+      #question_all{
+        height:40vh
+      }
+
+      .background{
+        height:100vh
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid background p-4">
+    <h1 class="p-4 d-md-none" style="text-align:center; font-size:40px; font-family:Grand Hotel; margin:0">Halaman Admin</h1>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-6 row justify-content-center">
+        <div class="col-12 col-sm-6">
+          <h5 style="width: 100%; background:#C14040;padding:10px; color:#fff; text-align:center; font-family:Grand Hotel">Pertanyaan Belum Terjawab</h5>
+          <div class="input-group input_bar">
+            <input type="text" class="form-control" placeholder="Cari Pertanyaan" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-light" style="background: white;" type="button" id="send_quest"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+          <div class="button-content horizontal-scroll p-2" style="text-align: center;">
+            <input type="radio" class="btn-check" name="target_tanya" id="bidang_1" autocomplete="off" value="Bidang 1">
+            <label class="btn btn-outline-primary" for="bidang_1"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+              Bidang 1
+            </label>
+
+            <input type="radio" class="btn-check" name="target_tanya" id="bidang_2" autocomplete="off" value="Bidang 2">
+            <label class="btn btn-outline-primary" for="bidang_2"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+              Bidang 2
+            </label>
+
+            <input type="radio" class="btn-check" name="target_tanya" id="bidang_3" autocomplete="off" value="Bidang 3">
+            <label class="btn btn-outline-primary" for="bidang_3"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+              Bidang 3
+            </label>
+
+            <input type="radio" class="btn-check" name="target_tanya" id="bidang_4" autocomplete="off" value="Bidang 4">
+            <label class="btn btn-outline-primary" for="bidang_4"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+              Bidang 4
+            </label>
+          </div>
+          <div id="belum_jawab" class="vertical-scroll"></div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <h1 class="p-2" style="text-align:center; font-family:Grand Hotel">Halaman Admin</h1>
+          <div style="background: linear-gradient(0deg, rgba(193, 64, 64, 0.95), rgba(193, 64, 64, 0.95)), url(https://i.pinimg.com/564x/41/75/89/417589977935a69806102c96c8da09dc.jpg); text-align:center; border-radius:20px !important;" class="p-4">
+            <div class="d-flex" style="width: 100%;">
+              <div style="width: 33.3%; background-size:cover;"></div>
+              <div style="width: 33.3%; background-size:cover;"><h5 style="color: #fff; font-family:Grand Hotel">Nama Pegawai</h5></div>
+              <div style="width: 33.3%; background-size:cover;"></div>
+            </div>
+            <div class="d-flex" style="height: 40px; width: 100%;">
+              <div style="width: 33.3%; background-size:cover; height:100%"></div>
+              <div style="width: 33.3%; background-size:cover; background-color:rgba(255, 255, 255); height:100%"></div>
+              <div style="width: 33.3%; background-size:cover; height:100%"><h5 style="color: #fff; font-family:Grand Hotel">Nama Pegawai</h5></div>
+            </div>
+            <div class="d-flex" style="height: 40px; width: 100%;">
+              <div style="width: 33.3%; background-size:cover; height:100%"><h5 style="color: #fff; font-family:Grand Hotel">Nama Pegawai</h5></div>
+              <div style="width: 33.3%; background-size:cover; background-color:rgba(255, 255, 255); height:100%"></div>
+              <div style="width: 33.3%; background-size:cover; background-color:rgba(255, 255, 255, 0.87); height:100%"></div>
+            </div>
+            <div class="d-flex barchart" style="width: 100%;">
+              <div class="position-relative" style="width: 33.3%; background-size:cover; background-color:rgba(255, 255, 255, 0.47);">
+                <div class="position-absolute top-50 start-50 translate-middle" style="background:#C14040; border-radius:50%">
+                  <p class="rekor_val">99</p>
+                </div>
+              </div>
+              <div class="position-relative" style="width: 33.3%; background-size:cover; background-color:rgba(255, 255, 255);">
+                <div class="position-absolute top-50 start-50 translate-middle" style="background:#C14040; border-radius:50%">
+                  <p class="rekor_val">99</p>
+                </div>
+              </div>
+              <div class="position-relative" style="width: 33.3%; background-size:cover; background-color:rgba(255, 255, 255, 0.87);">
+                <div class="position-absolute top-50 start-50 translate-middle" style="background:#C14040; border-radius:50%">
+                  <p class="rekor_val">99</p>
+                </div>
+              </div>
+            </div>            
+          </div>
+          <div id="question_all" class="vertical-scroll question_pop p-2">
+            <div class="question mt-2">
+              <h4>Nama Penanya - Instansi/Bidang</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+            <div class="question mt-2">
+              <h4>Nama Penanya - Instansi/Bidang</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+            <div class="question mt-2">
+              <h4>Nama Penanya - Instansi/Bidang</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+            <div class="question mt-2">
+              <h4>Nama Penanya - Instansi/Bidang</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+            <div class="question mt-2">
+              <h4>Nama Penanya - Instansi/Bidang</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+            <div class="question mt-2">
+              <h4>Nama Penanya - Instansi/Bidang</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+            <div class="question mt-2">
+              <h4>Nama Penanya - Instansi/Bidang</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+            <div class="question mt-2">
+              <h4>Nama Penanya - Instansi/Bidang</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+            <div class="question mt-2">
+              <h4>Nama Penanya - Instansi/Bidang</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 row justify-content-center">
+        <div class="col-12 col-sm-5 position-relative m-2" style="background:linear-gradient(0deg, rgba(193, 64, 64, 0.95), rgba(193, 64, 64, 0.95)), url(https://i.pinimg.com/564x/41/75/89/417589977935a69806102c96c8da09dc.jpg); border-radius: 20px;">
+          <div style="margin:20px 10px">
+            <div style="font-size: 12px; color:#fff"><i class="fa-solid fa-square"></i> Sudah Terjawab</div>
+            <div style="font-size: 12px; color:#f5b5b5"><i class="fa-solid fa-square"></i> Belum Terjawab</div>
+          </div>
+          <div class="position-absolute top-50 start-50 translate-middle position-relative" style="background: conic-gradient(#f5b5b5 60%, #fff 40%); height:150px; width: 150px; border-radius:50%">
+            <div class="position-absolute top-50 start-50 translate-middle" style="background:#C14040; border-radius:50%">
+              <p style="font-size: 50px; color:#fff; margin:0; line-height:120px; width: 120px; text-align:center">99</p>
+            </div>
+          </div>
+          <h1 style="text-align:center; margin-top:200px; color:#fff">BIDANG 1</h1>
+        </div>
+        <div class="col-12 col-sm-5 position-relative m-2" style="background:linear-gradient(0deg, rgba(193, 64, 64, 0.95), rgba(193, 64, 64, 0.95)), url(https://i.pinimg.com/564x/41/75/89/417589977935a69806102c96c8da09dc.jpg); border-radius: 20px;">
+          <div style="margin:20px 10px">
+            <div style="font-size: 12px; color:#fff"><i class="fa-solid fa-square"></i> Sudah Terjawab</div>
+            <div style="font-size: 12px; color:#f5b5b5"><i class="fa-solid fa-square"></i> Belum Terjawab</div>
+          </div>
+          <div class="position-absolute top-50 start-50 translate-middle position-relative" style="background: conic-gradient(#f5b5b5 60%, #fff 40%); height:150px; width: 150px; border-radius:50%">
+            <div class="position-absolute top-50 start-50 translate-middle" style="background:#C14040; border-radius:50%">
+              <p style="font-size: 50px; color:#fff; margin:0; line-height:120px; width: 120px; text-align:center">99</p>
+            </div>
+          </div>
+          <h1 style="text-align:center; margin-top:200px; color:#fff">BIDANG 2</h1>
+        </div>
+        <div class="col-12 col-sm-5 position-relative m-2" style="background:linear-gradient(0deg, rgba(193, 64, 64, 0.95), rgba(193, 64, 64, 0.95)), url(https://i.pinimg.com/564x/41/75/89/417589977935a69806102c96c8da09dc.jpg); border-radius: 20px;">
+          <div style="margin:20px 10px">
+            <div style="font-size: 12px; color:#fff"><i class="fa-solid fa-square"></i> Sudah Terjawab</div>
+            <div style="font-size: 12px; color:#f5b5b5"><i class="fa-solid fa-square"></i> Belum Terjawab</div>
+          </div>
+          <div class="position-absolute top-50 start-50 translate-middle position-relative" style="background: conic-gradient(#f5b5b5 60%, #fff 40%); height:150px; width: 150px; border-radius:50%">
+            <div class="position-absolute top-50 start-50 translate-middle" style="background:#C14040; border-radius:50%">
+              <p style="font-size: 50px; color:#fff; margin:0; line-height:120px; width: 120px; text-align:center">99</p>
+            </div>
+          </div>
+          <h1 style="text-align:center; margin-top:200px; color:#fff">BIDANG 3</h1>
+        </div>
+        <div class="col-12 col-sm-5 position-relative m-2" style="background:linear-gradient(0deg, rgba(193, 64, 64, 0.95), rgba(193, 64, 64, 0.95)), url(https://i.pinimg.com/564x/41/75/89/417589977935a69806102c96c8da09dc.jpg); border-radius: 20px;">
+          <div style="margin:20px 10px">
+            <div style="font-size: 12px; color:#fff"><i class="fa-solid fa-square"></i> Sudah Terjawab</div>
+            <div style="font-size: 12px; color:#f5b5b5"><i class="fa-solid fa-square"></i> Belum Terjawab</div>
+          </div>
+          <div class="position-absolute top-50 start-50 translate-middle position-relative" style="background: conic-gradient(#f5b5b5 60%, #fff 40%); height:150px; width: 150px; border-radius:50%">
+            <div class="position-absolute top-50 start-50 translate-middle" style="background:#C14040; border-radius:50%">
+              <p style="font-size: 50px; color:#fff; margin:0; line-height:120px; width: 120px; text-align:center">99</p>
+            </div>
+          </div>
+          <h1 style="text-align:center; margin-top:200px; color:#fff">BIDANG 4</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
+<script type="text/javascript">
+  for(i=0;i<10;i++){
+    $("#belum_jawab").append($('<div>').load("component/tab_aks.html",function() {
+      $(".num_or_img").html('<i class="fa-regular fa-user"></i>');  
+    }));
+  }
+</script>
