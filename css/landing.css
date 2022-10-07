@@ -5,12 +5,14 @@ body{
 }
 
 #main_content{
-  height: 100vh;
+  max-height: 100vh;
   z-index: 0;
 }
 
 .background{
   background: url(../image/background-inside.jpg), #FFF;
+  background-position: center;
+  background-size: contain;
 }
 
 .leftbar{
@@ -115,6 +117,12 @@ body{
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
+.tab_list:hover{
+  color: #FFF;
+  background-color: #C14040;
+  cursor: pointer;
+}
+
 .question_pop .question{
   background-color: #FFF;
 }
@@ -160,6 +168,28 @@ body{
 
 /* Handle on hover */
 .vertical-scroll::-webkit-scrollbar-thumb:hover {
+  background: #C14040; 
+}
+
+.horizontal-scroll{
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+/* Track */
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.horizontal-scroll::-webkit-scrollbar-thumb {
   background: #C14040; 
 }
 
@@ -221,11 +251,25 @@ body{
   height:120px;
 }
 
-@media (min-width: 768px){
-  .leftbar{
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
-    height: 100vh;
-    z-index:1;
+.judulHome{
+  font-family: Grand Hotel;
+  font-size:80pt;
+  margin:0;
+  display: inline;
+}
+
+.wakotImage{
+  background-image: url(../image/wakot.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 600px;
+  height: 300px;
+}
+
+@media (max-width: 768px){
+  .judulHome{
+    font-size:40pt
   }
 }
 
